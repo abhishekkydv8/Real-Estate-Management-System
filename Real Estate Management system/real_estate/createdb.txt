@@ -1,0 +1,60 @@
+CREATE TABLE users(
+    email varchar(100) PRIMARY KEY,
+    contact_no varchar(100),
+    name varchar(100),
+    pwd varchar(255),
+    usertype varchar(100)
+);
+
+CREATE TABLE admin(
+    email varchar(100) PRIMARY KEY,
+    pwd varchar(100),
+    address varchar(100),
+    name varchar(100),
+    contact_no varchar(10)
+);
+
+INSERT INTO admin values
+('giriadarsh2@gmail.com','12345678','Nitc','Adarsh','8709238093') ;
+
+CREATE TABLE owner(
+    email varchar(100) PRIMARY KEY,
+    contact_no varchar(100),
+    name varchar(100),
+    pwd varchar(255),
+    address varchar(200)
+);
+
+CREATE TABLE customer(
+    email varchar(100) PRIMARY KEY,
+    contact_no varchar(100),
+    name varchar(100),
+    pwd varchar(255),
+    address varchar(200)
+);
+
+CREATE TABLE sell(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    type varchar(100),
+    size varchar(100),
+    prize varchar(100),
+    contact varchar(100),
+    address varchar(255),
+    userid varchar(100),
+    FOREIGN KEY (userid) REFERENCES users (email)
+);
+
+CREATE TABLE request(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    type varchar(100),
+    size varchar(100),
+    prize varchar(100),
+    contact varchar(100),
+    address varchar(255)
+);
+
+CREATE TABLE message(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    email varchar(100),
+    message varchar(255)
+);

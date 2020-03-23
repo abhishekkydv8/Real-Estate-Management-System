@@ -1,0 +1,16 @@
+	.signupText{
+		margin: 0;
+
+		max-width: 350px;
+	}
+	.bgSet{
+		background-image: url('../images/signupBg.jpg');
+	}
+	.bgGradient{
+		background-image: linear-gradient(to right,rgba(211, 209, 212, 1),rgba(211, 209, 212, 0));
+		min-height: 90vh;
+	}
+	.form-hint{
+		visibility: hidden;
+		color: red;
+	}
